@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>メモ詳細</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>メモアプリ</h1>
+    <h2><%= escape_html(@note['title']) %></h2>
+    <p><%= escape_html(@note['content']) %></p>
+    <a href="/notes/<%= @note['id'] %>/edit">変更</a>
+    <form action="/notes/<%= @note['id'] %>" method="post" style="display:inline;">
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit">削除</button>
+    </form>
+    <a class="back-link" href="/">戻る</a>
+  </div>
+</body>
+</html>
