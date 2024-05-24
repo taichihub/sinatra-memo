@@ -125,6 +125,7 @@ DEPENDENCIES
   json
   puma (>= 6.0.0)
   rackup (~> 2.1)
+  rubocop (~> 1.64)
   sinatra
   sinatra-contrib
 
