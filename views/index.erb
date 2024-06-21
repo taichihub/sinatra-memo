@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>メモ一覧</title>
-  <link rel="stylesheet" type="text/css" href="/styles.css">
-</head>
-<body>
-  <div class="container">
-    <h1>メモアプリ</h1>
-    <h2>メモ一覧</h2>
-    <a href="/notes/new">追加</a>
-    <ul>
-      <% @notes.each do |note| %>
-        <li>
-          <a href="/notes/<%= note['id'] %>"><%= escape_html(note['title']) %></a>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</body>
-</html>
+<h2>メモ一覧</h2>
+<a href="/notes/new">追加</a>
+<ul>
+  <% @notes.each do |note| %>
+    <li>
+      <a href="/notes/<%= note['id'] %>"><%= escape_html(note['title']) %></a>
+    </li>
+  <% end %>
+</ul>

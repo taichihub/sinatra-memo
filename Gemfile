@@ -2,7 +2,6 @@
 
 source 'https://rubygems.org'
 
-gem 'erb_lint', require: false
 gem 'json'
 gem 'puma', '>= 6.0.0'
 gem 'rackup', '~> 2.1'
