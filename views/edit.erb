@@ -1,0 +1,8 @@
+<h2>メモ編集</h2>
+<form action="/notes/<%= @note['id'] %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label>タイトル: <input type="text" name="title" value="<%= escape_html(@note['title']) %>"></label>
+  <label>内容: <textarea name="content"><%= escape_html(@note['content']) %></textarea></label>
+  <button type="submit">保存</button>
+</form>
+<a class="back-link" href="/">戻る</a>
